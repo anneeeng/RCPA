@@ -1,286 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Request for Corrective Action Report</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <!-- AngularJS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <!-- Angular Aria -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
-  <!-- Angular Material -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.min.js"></script>
-  <!-- Angular Animate -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Request for Corrective Action Report</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <!-- AngularJS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+      <!-- Angular Aria -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+      <!-- Angular Material -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.min.js"></script>
+      <!-- Angular Animate -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* Custom CSS for sidebar */
-    .w3-sidebar {
-      background-color: #6c757d; /* Change sidebar background color */
-      color: white;
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
     }
-
-    /* Custom CSS for footer */
-    footer {
-      background-color: #6c757d; /* Change footer background color */
-      color: white;
-      text-align: center;
-      padding: 10px;
+    
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1;
       position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
+      height: 100%;
+      overflow: auto;
     }
-
-    /* Custom CSS for header */
-    header {
-      padding: 10px;
+    
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
     }
-  </style>
-</head>
-<body>
-  <header class="bg-secondary text-white">
-    <div class="container-fluid">
-      <div class="row">   
-        <div class="col-md-3">
-          <img src="company_logo.png" alt="company logo" class="img-fluid">    
-        </div>
-        <div class="col-md-6 text-center">
-          <h1 class="font-weight-bold">Request for Corrective Action Report</h1>
-        </div>
-        <div class="col-md-3">
-          <p>DOC.NO.: AI-QA-04.D</p>
-          <p>ISSUE/REV.NO.: 4</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Sidebar -->
-  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-    <a href="index.html" class="w3-bar-item w3-button">Auditor</a>
-    <a href="audit3.html" class="w3-bar-item w3-button">Auditee </a>
-    <a href="#" class="w3-bar-item w3-button">Record Section</a>
-  </div>
-  
-  <!-- Page Content -->
-  <div class="w3-r">
-    <button class="w3-button w3-drark-gray w3-xlarge" onclick="w3_open()">☰</button>
-    <div class="w3-container">
-    </div>
-  </div>
-  <script>
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-  }
-  
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-  }
-  </script>
-  </header>
-            <div class="col-md-9">
-                <section class="container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="row">
-                            </div>
-                            <form class="form-horizontal ng-pristine ng-valid ng-scope">
-                              <form id="reportForm">
-                    <div class="container p-3 -1 border">
-                        <label>Auditor/Initiator: </label>
-                        <input type="text" class="form-control" id="auditorInitiator" name="auditorInitiator" placeholder="Auditor" >
-                        <label>Auditee: </label>
-                        <input type="text" class="form-control" id="Auditee" name="Auditee" placeholder="Auditee" >
-                        <label>Date of Audit:</label>
-                        <input type="text" class="form-control" id="dateofAudit" name="dateofAudit" placeholder="Date of Audit">
-                        <label>Time: </label>
-                        <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                        <label>NCR/RPCA No.:</label>
-                        <input type="text" class="form-control" id="ncr" name="ncr" placeholder="NCR/RCPA No." >
-                        <label>Date Filed:</label>
-                        <div ng-app="myApp" ng-controller="TimePickerController" layout="column" layout-align="center left">
-                            <md-input-container>
-                              <label>Select Date</label>
-                              <md-datepicker ng-model="selectedDate" md-placeholder="Select Date"></md-datepicker>
-                            </md-input-container>
-                          </div>
-                    
-                        <button class="btn btn-info dropdown-toggle" type="button" id="form1" data-toggle="dropdown">Shift
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="form1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1st</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2nd</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3rd</a></li>
-                          <li role="presentation" class="divider"></li>
-                        </ul> <br>
-                        <label>Time: </label>
-                        <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                        <label>NCR/RPCA No.:</label>
-                        <input type="text" class="form-control" id="ncr" name="ncr" placeholder="NCR/RCPA No." >
-                        <label>Non conformity Observed in Process:</label>
-                        <input type="text" class="form-control" id="departmentSection" name="departmentSection" placeholder="Department/Section">
-                        <label>Audit Closing Meeting Date:</label>
-                        <input type="text" class="form-control" id="dateFiled" name="dateFiled" placeholder="Audit Closing Meeting Date">
-                        <label>Due Date:</label> 
-                        <input type="text" class="form-control" id="dueDate" name="dueDate" placeholder="Due Date">
-                    <div class="form-group">
-                        <label>Status:</label>
-                        <input type="radio" id="am" name="status" value="am">
-                        <label>Open</label>
-                        <input type="radio" id="pm" name="status" value="pm">
-                        <label>Close</label>
-                    </div>
-                    <div class="dropdown 2">
-                        <button class="btn btn-info dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Classification
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> <br>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Major </a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Minor</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Observation</a></li> 
-                          <li role="presentation" class="divider"></li>
-                        </ul>
-                      </div> <br>
-                    <div class="form-group">
-                        <label>Standard: </label>
-                        <input type="checkbox" id="iatf" name="standard" value="iatf">
-                        <label>IATF 16949</label>
-                        <input type="checkbox" id="iso9" name="standard" value="iso9">
-                        <label>ISO 9001</label>
-                        <input type="checkbox" id="iso14" name="standard" value="iso14">
-                        <label>ISO 14001</label>
-                        <input type="checkbox" id="iso17" name="standard" value="iso17">
-                        <label>ISO 17025</label>
-                    </div>
-                    <div class="form-group">
-                        <label>Clause No: </label>
-                        <input type="text" class="form-control" id="clauseNo" name="clauseNo" placeholder="Clause No.">
-                        <label>Doc. No. </label>
-                        <input type="text" class="form-control" id="docNo" name="docNo" placeholder="Doc. No.">
-                        <label>Clause/Document Description: </label>
-                    <input type="text" class="form-control" id="cdd" name="cdd" placeholder="Clause/Document Description">
-                    </div>
-                    <div class="dropdown 3">
-                        <label>Audit Type: </label>
-                        <button class="btn btn-info dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Audit type
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Internal QMS Audit </a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Manufacturing Audit</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Product Audit</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Online Audit</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Internal EMS Audit</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">External IATF16949 Audit</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">External EMS Audit</a></li>
-                          <li role="presentation" class="divider"></li>
-                        </ul>
-                    </div> <br>
-                    <div class="dropdown 4">
-                        <label>Document required: </label>
-                        <button class="btn btn-info dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Document required
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" >Problem Analysis</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Incident Report </a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sorting Report </a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Risk Assessment</a></li>
-                          <li role="presentation" class="divider"></li>
-                        </ul>
-                    </div> 
-                    <div class="form-group">
-                    <label>Statement of Non-conformity: </label>
-                    <input type="text" class="form-control" id="statement" name="statement" placeholder="Statement of Non-conformity">
-                    <label>Requirement: </label>
-                    <input type="text" class="form-control" id="requirement" name="requirement" placeholder="Requirement">
-                    <label>Object Evidence: </label>
-                    <input type="text" class="form-control" id="objectEvidence" name="objectEvidence" placeholder="Object Evidence">
-                </div>
-                            </form>    
-                        </div>
-                    </div>
-                </section>
+    
+    .sidebar a.active {
+      background-color: #79837f;
+      color: white;
+    }
+    
+    .sidebar a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+    
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+    
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+    </style>
+    </head>
+    <header class="bg-secondary text-white">
+        <div class="container-fluid">
+          <div class="row">   
+            <div class="col-md-3">
+              <img src="company_logo.png" alt="company logo" class="img-fluid">    
             </div>
+            <div class="col-md-6 text-center">
+              <h1 class="font-weight-bold">REQUEST FOR CORRECTIVE ACTION REPORT</h1>
+            </div>
+            <div class="col-md-3">
+              <p>DOC.NO.: AI-QA-04.D</p>
+              <p>ISSUE/REV.NO.: 4</p>
+            </div>
+          </div>
         </div>
+      </header>
+      <div class="sidebar">
+        <!-- Sidebar links with Font Awesome icons -->
+        <a class="active" href="index.html"><i class="fas fa-home"></i> Home</a> 
+        <a href="record.html"><i class="fas fa-list"></i> Record</a>
+        <a href="Arprofile.html"><i class="fas fa-user"></i> Profile</a>
+        <!-- Logout button -->
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
-    <script>
-      var shiftObject = {
-        "1st": {
-          "Major": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Minor": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Observation": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"], 
-        },
-        "2nd": {
-          "Major": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Minor": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Observation": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],   
-        },
-         "3rd": {
-          "Major": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Minor": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"],
-          "Observation": ["Internal QMS Audit", "Manufacturing Audit", "Product Audit", "Online Audit", "Internal EMS Audit", "External IATF 16949 Audit", "External EMS Audit"], 
-        }
-      }
-      window.onload = function() {
-        var shiftSel = document.getElementById("shift");
-        var classSel = document.getElementById("class");
-        var auditSel = document.getElementById("audit");
-        var docSel = document.getElementById("docs");
-        for (var x in shiftObject) {
-          shiftSel.options[shiftSel.options.length] = new Option(x, x);
-        }
-        shiftSel.onchange = function() {
-          //empty class, audit type- and docs- dropdowns
-          auditSel.length = 1;
-          classSel.length = 1;
-          docSel.length = 1;
-          //display correct values
-          for (var y in shiftObject[this.value]) {
-            classSel.options[classSel.options.length] = new Option(y, y);
-          }
-        }
-        classSel.onchange = function() {
-          //empty audit type dropdown
-          auditSel.length = 1;
-          //display correct values
-          var z = shiftObject[shiftSel.value][this.value];
-          for (var i = 0; i < z.length; i++) {
-            auditSel.options[auditSel.options.length] = new Option(z[i], z[i]);
-          }
-        }
-      }
-      </script>
-  <script>
-    var app = angular.module('myApp', ['ngMaterial', 'ngAnimate']);
   
-    app.controller('TimePickerController', ['$scope', function($scope) {
-      // Initialize selectedDate with current time
-      $scope.selectedDate = new Date();
-    }]);
-  </script>
- 
-
-  <!-- Footer -->
-  <footer>
-    <p>This is the footer.</p>
-  </footer>
-
-  <script>
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-    }
+            <form id="reportForm">
+            <div class="container p-2 -1 border">
+                <label>Auditor/Initiator: </label>
+                <input type="text" class="form-control" id="auditorInitiator" name="auditorInitiator" placeholder="Auditor" >
+                <label>Auditee: </label>
+                <input type="text" class="form-control" id="Auditee" name="Auditee" placeholder="Auditee" > <br>
+                <label>Date Filed:</label>
+                <div ng-app="myApp" ng-controller="TimePickerController" layout="column" layout-align="center left">
+                      <md-datepicker ng-model="selectedDate" md-placeholder="Select Date"></md-datepicker>
+                  </div>
+                  <label>Due Date: </label>
+                  <div ng-app="myApp" ng-controller="TimePickerController" layout="column" layout-align="center left">
+                    <md-datepicker ng-model="dueDate" md-placeholder="Select Date"></md-datepicker>
+                </div>
+                  <label>NCR/RPCA No.:</label>
+                  <input type="text" class="form-control" id="ncr" name="ncr" placeholder="NCR/RCPA No." > <br>
+                <label>Classification: <select name="subject" id="subject"> </label>
+                  <option value="" class="form-control"  selected="selected">Select classification</option>
+                </select>
+                <br><br>
+              Audit Type: <select name="audit" id="audit">
+                  <option value="" class="form-control"  selected="selected">Please select classification first</option>
+                </select>
+                <br><br>
+              Process: <select name="process" id="process">
+                  <option value="" class="form-control" selected="selected">Please select audit type first</option>
+                </select> <br>
+                <label>Non conformity Observed in Process:</label> <ng-view onload="$('#loading').show();" class="ng-scope">
+                  <div id="page-title" class="ng-scope">
+                      <div class="fileinput fileinput-new  pull-right" data-provides="fileinput">
+                          <span class="btn btn-green btn-file">
+                              <input accept=".json,application/json" ng-model="file" on-file-change="import" title="Load report" type="file" class="ng-pristine ng-untouched ng-valid ng-empty">
+                              <i class="glyph-icon icon-upload"></i>
+                          </span> 
+                                  <!-- ngIf: !$scope.isSingleFile() --><div class="col-sm-3 ng-scope" ng-if="!$scope.isSingleFile()">
+                                  </div><!-- end ngIf: !$scope.isSingleFile() -->
+                              </div>
+                          </div>
+                  </form>
+                  
+                  <!-- ngRepeat: report in reports| filter:filter track by report.uuid -->
+                  </ng-view>
+                <input type="text" class="form-control" id="departmentSection" name="departmentSection" placeholder="Department/Section"> <br>
+            <script>
+  var subjectObject = {
+    "Major": {
+      "Internal QMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Manufacuring Audit":["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Product Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Online Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Internal EMS Audit":["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External EMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External IATF16949 Audit":["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "GHK": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Laboratory Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
   
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
+  
+    },
+    "Minor": {
+      "Internal QMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Manufacuring Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Product Audit":["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Online Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Internal EMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External EMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External IATF16949 Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "GHK": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Laboratory Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+    },
+    "Observation": {
+      "Internal QMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Manufacuring Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Product Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Online Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Internal EMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External EMS Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "External IATF16949 Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "GHK": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+      "Laboratory Audit": ["Plastics", "Dry Charge", "Acid Plant", "Plates", "MCB", "Calibration", "Maintenance", "OMMC/IBG", "Wet Fin", "Mat/Production Planning", "Demand Planning", "Mat/Prod-Demand Planning", "SCM Logistic", "Technical", "Environmental and Safety", "ABAssembly1", "ABAssembly2", "Assembly Tooling", "Shrink Wrapping","QMD", "Procurement", "Finance/Accounting", "HR", "PBI-IT", "Kaisa"],
+    },
     }
+  window.onload = function() {
+    var subjectSel = document.getElementById("subject");
+    var auditSel = document.getElementById("audit");
+    var processSel = document.getElementById("process");
+    for (var x in subjectObject) {
+      subjectSel.options[subjectSel.options.length] = new Option(x, x);
+    }
+    subjectSel.onchange = function() {
+      //empty Chapters- and Topics- dropdowns
+      processSel.length = 1;
+      auditSel.length = 1;
+      //display correct values
+      for (var y in subjectObject[this.value]) {
+        auditSel.options[auditSel.options.length] = new Option(y, y);
+      }
+    }
+    auditSel.onchange = function() {
+      //empty Chapters dropdown
+      processSel.length = 1;
+      //display correct values
+      var z = subjectObject[subjectSel.value][this.value];
+      for (var i = 0; i < z.length; i++) {
+        processSel.options[processSel.options.length] = new Option(z[i], z[i]);
+      }
+    }
+  }
   </script>
+              </form>    
+              </div>
+            </div>
+        </section>
+    </div>
+</div>
+</div>
+<script>
+  var app = angular.module('myApp', ['ngMaterial', 'ngAnimate']);
+
+  app.controller('TimePickerController', ['$scope', function($scope) {
+    // Initialize selectedDate with current time
+    $scope.selectedDate = new Date();
+
+    // Initialize due date after selected date
+    $scope.dueDate = new Date($scope.selectedDate);
+    $scope.dueDate.setDate($scope.selectedDate.getDate() + 1); // Set due date 1 day after selected date
+  }]);
+</script>
+
 </body>
 </html>
